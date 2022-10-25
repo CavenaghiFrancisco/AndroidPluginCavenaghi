@@ -31,7 +31,7 @@ public class CavenaghiLogger
         unityActivity = activity;
     }
 
-    public void SendLog(String message)
+    public void AddLog(String message)
     {
         currentLogs += message;
     }
@@ -54,7 +54,7 @@ public class CavenaghiLogger
                     @Override
                     public void onClick(DialogInterface dialog, int which)
                     {
-                        alert.OnConfirmation();
+                        alert.OnPositive();
                         dialog.cancel();
                     }
                 }
@@ -67,7 +67,7 @@ public class CavenaghiLogger
                     @Override
                     public void onClick(DialogInterface dialog, int which)
                     {
-                        alert.OnDeny();
+                        alert.OnNegative();
                         dialog.cancel();
                     }
                 }
