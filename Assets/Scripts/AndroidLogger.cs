@@ -37,8 +37,8 @@ public class AndroidLogger : Logger
 
     public override void Clear()
     {
-        ShowAlert("All records will be deleted.", "Do you want to continue?", () => androidLoggerObject.Call("ClearLogs"));
-        text.text = "";
+        ShowAlert("All records will be deleted.", "Do you want to continue?", () => { androidLoggerObject.Call("ClearLogs"); text.text = ""; });
+        
     }
 
     public override void AddLog(string log)

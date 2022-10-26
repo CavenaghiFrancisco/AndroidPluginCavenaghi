@@ -134,6 +134,8 @@ public class CavenaghiLogger
     public void ClearLogs()
     {
         currentLogs = "";
+        if(file == null)
+            file = new File(path);
         file.delete();
     }
 }
